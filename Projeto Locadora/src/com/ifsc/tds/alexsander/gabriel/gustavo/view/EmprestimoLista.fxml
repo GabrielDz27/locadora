@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="pnlPrincipal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ifsc.tds.alexsander.gabriel.gustavo.controller.EmprestimoListaController">
+   <children>
+      <SplitPane fx:id="pnlDivisao" dividerPositions="0.35451505016722407" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane fx:id="pnlCadastro" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="210.0">
+               <children>
+                  <TableView fx:id="tbvCadastro" layoutY="-2.0" prefHeight="398.0" prefWidth="209.0">
+                    <columns>
+                      <TableColumn fx:id="tbcCodigo" minWidth="0.0" prefWidth="104.5" text="Código" />
+                      <TableColumn fx:id="tbcNome" prefWidth="104.5" text="Nome" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="pnlLista" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="321.0">
+               <children>
+                  <Label fx:id="lblDetalhes" layoutX="14.0" layoutY="14.0" text="Detalhes" />
+                  <GridPane fx:id="pnlDetalhesContato" layoutX="10.0" layoutY="54.0" prefHeight="265.0" prefWidth="375.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lblValorEmprestimoValor" text="Valor do emprestimo" GridPane.rowIndex="2" />
+                        <Label fx:id="lblCliente" text="Cliente" />
+                        <Label fx:id="lblDataEmprestimo" prefHeight="17.0" prefWidth="114.0" text="Data de Emprestimo" GridPane.rowIndex="4" />
+                        <Label fx:id="lblDataEntrega" text="Data de entrega" GridPane.rowIndex="3" />
+                        <Label fx:id="lblidvalor" GridPane.columnIndex="1" />
+                        <Label fx:id="lblValorEmprestimovalor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="lblDataEntregValor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="lblDataEmprestimoValor" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Observação" GridPane.rowIndex="5" />
+                        <Label fx:id="lblObservacaoValor" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="lblFilme" text="Filme" GridPane.rowIndex="1" />
+                        <Label fx:id="lblFilmeValor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="lblClienteValor" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar fx:id="barBotoes" layoutX="111.0" layoutY="351.0" prefHeight="40.0" prefWidth="0.0">
+                    <buttons>
+                      <Button fx:id="btnIncluir" mnemonicParsing="false" onAction="#onClickBtnIncluir" text="Incluir">
+                           <tooltip>
+                              <Tooltip fx:id="tlpIncluir" text="Incluir" />
+                           </tooltip></Button>
+                        <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#onClickBtnEditar" text="Editar">
+                           <tooltip>
+                              <Tooltip fx:id="tlpEditar" text="Editar" />
+                           </tooltip></Button>
+                        <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#onClickBtnExcluir" text="Excluir">
+                           <tooltip>
+                              <Tooltip fx:id="tlpExcluir" text="Excluir" />
+                           </tooltip></Button>
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
